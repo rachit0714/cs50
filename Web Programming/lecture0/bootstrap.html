@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My Web Page!</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <style>
+            .row > div {
+                padding: 20px;
+                background-color: teal;
+                border: 2px solid black;
+            }
+            .txt {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="txt">
+                The Bootstrap library is used make the containers below where the first set of containers are of class="col-4" and the next set has class="col-3" and class="col-6"
+            </div>
+            <div class="txt">
+                The idea is to cover the screen the numbers add up to 12
+            </div>
+            <div class="txt">
+                class="col-lg-3 col-sm-6" says that on a large screen we are making a column of size 3 and on a small screen we are making a column of size 6
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    This is a section.
+                </div>
+                <div class="col-4">
+                    This is another section.
+                </div>
+                <div class="col-4">
+                    This is a third section.
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    This is a section.
+                </div>
+                <div class="col-6">
+                    This is another section.
+                </div>
+                <div class="col-3">
+                    This is a third section.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

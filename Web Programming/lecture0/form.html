@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms</title>
+</head>
+<body>
+    <form>
+        <a> Textbox is made with input tag type="text" placeholder="Displayed Text" name="name" </a>
+        <br/> <br/>
+        <a> Textbox with text hidden is made with input tag type="password" placeholder="Displayed Text" name="name" </a>
+        <br/> <br/>
+        <input type="text" placeholder="First Name" name="first">
+        <input type="password" placeholder="Password" name="password">
+        <br/> <br/>
+        <div>
+            Favorite Color using input tag with name="color" type=:"radio" and value="colorName":
+            <br/> <br/>
+            <input name="color" type="radio" value="blue"> Blue
+            <input name="color" type="radio" value="green"> Green
+            <input name="color" type="radio" value="yellow"> Yellow
+            <input name="color" type="radio" value="red"> Red
+
+        </div>
+        <br/> <br/>
+        <a> dropdown is made with an input tag where list="countries" and then a secondary datalist tag, which has option tags where value="value" </a>
+        <br/> <br/>
+        <div>
+            
+            <input name="country" list="countries" placeholder="Country">
+            <datalist id="countries">
+                <option value="Afghan">
+                <option value="Canada">
+                <option value="England">    
+                <option value="France">
+            </datalist>
+        </div>
+        <input type="submit">
+    </form>
+</body>
+</html>

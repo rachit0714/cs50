@@ -1,0 +1,56 @@
+relational database management is when data is stored in different tables with concrete columns
+and a flexible number of rows
+
+generic types of data:
+TEXT - String/characters
+NUMERIC - numbers that are in different forms
+INTEGER
+REAL - all numbers
+BLOB - Binary Large Object, like image or audio files
+
+some additional data types:
+CHAR(size) - space needed to be allocated
+VARCHAR(size) - if the space can range up to the size
+INT, BIGINT, FLOAT, DOUBLE
+
+CREATE TABLE {table_name}  (
+    id {data_type} PRIMARY KEY {constraints},
+    {column_name} {data_type} {constraints}
+    ...
+);
+
+for flights use below:
+CREATE TABLE flights(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    origin TEXT NOT NULL,
+    destination TEXT NOT NULL,
+    duration INTEGER NOT NULL
+);
+
+constraints:
+CHECK: Makes sure certain constraints are met before allowing a row to be added/modified
+DEFAULT: Provides a default value if no value is given
+NOT NULL: Makes sure a value is provided
+PRIMARY KEY: Indicates this is the primary way of searching for a row in the database
+UNIQUE: Ensures that no two rows have the same value in that column.
+
+query to add data to the table is INSERT
+INSERT INTO {table_name}
+(columns you are going to add data to)
+VALUES (data matching same number to above)
+
+query to get data from table is SELECT
+SELECT * FROM {table_name} -- gets you the whole table
+
+Along constrants in getting the table you can also apply functions to get results
+
+there is an query to change values called UPDATE
+UPDATE {table_name}
+    SET {column_name} = value
+    WHERE {column_name} = value
+    AND ...
+
+JOIN can take information from 2 different tables
+
+CREATE INDEX makes looking up info faster
+CREATE INDEX name_index ON passenger(last);

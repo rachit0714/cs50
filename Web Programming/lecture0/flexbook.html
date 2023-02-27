@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Screen Size</title>
+        <style>
+            #container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #container > div {
+                background-color: green;
+                font-size: 20px;
+                margin: 20px;
+                padding: 20px;
+                width: 200px;
+            }
+            .RedClass {
+                background-color: blue;
+            }
+            #YellowID {
+                background-color: yellow;
+                color: yellow;
+            }
+            #grid {
+                border: 1px solid black;
+                border-collapse: collapse;
+                background-color: white;
+                display: grid;
+                grid-template-columns: 200px auto 200px;
+            }
+            .grid-item {
+                background-color: cyan;
+                border: 1px solid black;
+                font-size: 20px;
+                padding: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div> To use flexbox we set the id of div to container set it's display to flex and flex-wrap to wrap. </div>
+            <div> All div's inside container is set to green</div>
+            <div> but the first box is inline color is set to blue, second is set to red with class and third is set to yellow with id, both background color and text color </div>
+        </div>
+        <div id="container">
+            <div style="background-color:blue">Some text 1!</div>
+            <div class="RedClass">Some text 2!</div>
+            <div id="YellowID">Some text 3!</div>
+            <div>Some text 4!</div>
+            <div>Some text 5!</div>
+            <div>Some text 6!</div>
+            <div>Some text 7!</div>
+            <div>Some text 8!</div>
+            <div>Some text 9!</div>
+            <div>Some text 10!</div>
+            <div>Some text 11!</div>
+            <div>Some text 12!</div>
+        </div>
+        <div>
+            For the grid below we set the display to grid, grid-template-columns to "200px auto 200px" so that the the whole screen gets taken up
+        </div>
+        <div id="grid">
+            <div class="grid-item"> item 1 </div>
+            <div class="grid-item"> item 2 </div>
+            <div class="grid-item"> item 3 </div>
+            <div class="grid-item"> item 4 </div>
+            <div class="grid-item"> item 5 </div>
+            <div class="grid-item"> item 6 </div>
+        </div>
+    </body>
+</html>

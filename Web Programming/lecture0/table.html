@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HTML Elements</title>
+    </head>
+    <body>
+        <!-- We can create headings using h1 through h6 as tags. -->
+        <h1>A Large Heading using h1 tag</h1>
+        <h2>A Smaller Heading using h2 tag</h2>
+        <h6>The Smallest Heading using h6 tag</h6>
+
+        <!-- The strong and i tags give us bold and italics respectively. -->
+        A <strong>bold</strong> word that is surrounded by the 'strong' tag and an <i>italicized</i> word is surrounded by the 'i' tag!
+
+        <!-- We can link to another page (such as cs50's page) using a. -->
+        View the <a href="https://cs50.harvard.edu/">CS50 Website</a>! - used with an a tag and contains href="url"
+
+        <br/> <br/>
+        <!-- We used ul for an unordered list and ol for an ordered one. both ordered and unordered lists contain li, or list items. -->
+        An unordered list (ul tag):
+        <ul>
+            <li>foo</li>
+            <li>bar</li>
+            <li>baz</li>
+        </ul>
+        An ordered list (ol tag):
+        <ol>
+            <li>foo</li>
+            <li>bar</li>
+            <li>baz</li>
+        </ol>
+
+        <!-- Images require a src attribute, which can be either the path to a file on your computer or the link to an image online. It also includes an alt attribute, which gives a description in case the image can't be loaded. -->
+        An image using 'img' tag with src="fileLocation" and alt="AlternativeText":
+        <img src="../../images/duck.jpeg" alt="Rubber Duck Picture">
+        <!-- We can also see above that for some elements that don't contain other ones, closing tags are not necessary. -->
+
+        <!-- Here, we use a br tag to add white space to the page. -->
+        <br/> <br/>
+
+        <!-- A few different tags are necessary to create a table. -->
+        <a>table tag is 'table' and table header tag is 'thead' and each element in the table header has the tag 'th' </a>
+        <a>table body tag is 'tbody' and each row has the tag 'tr' finally each entry of the row has the tag 'td' </a>
+        <table>
+            <thead>
+                <th>Ocean</th>
+                <th>Average Depth</th>
+                <th>Maximum Depth</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pacific</td>
+                    <td>4280 m</td>
+                    <td>10911 m</td>
+                </tr>
+                <tr>
+                    <td>Atlantic</td>
+                    <td>3646 m</td>
+                    <td>8486 m</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+<html>

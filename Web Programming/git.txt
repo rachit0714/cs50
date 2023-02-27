@@ -1,0 +1,75 @@
+git clone url
+
+-- to create a new file in commandline
+touch filename
+
+-- add a file you want to track next time we want to save
+git add filename
+
+-- when you want to take a snapshot of a file that you want to commit
+git commit -m "message"
+
+-- tells you what branch you are on compared to the origin 
+-- also says how many commits you have currently saved
+git status
+
+-- sends commits to master
+git push
+
+-- commit all files that have been commited, also does add
+git commit -am "message"
+
+merge conflict
+-- git adds some extra data to the file
+a = 1
+<<<<< HEAD 
+b = 2
+=====
+b = 0
+>>>>> commit number
+c = 3
+d = 4
+
+between head and equal signs are your changes
+under the half and above the >>>>> is a hash of other commits
+remove conflict indicators, set code to what you want, then add commit push changes
+
+-- to see all the changes and who made what changes
+git log
+
+-- takes current repository state and reverts it
+git reset
+
+reverts to a particular hash
+git reset --hard <commit>
+
+reverts repo to your current repository
+git reset --hard origin/master
+
+You can branch if you want to work on a new feature so that you can work concurrently on different parts of your code
+This avoids having to reverting the new feature if you find a bug somewhere else in the same code
+
+Head is set fixed upon Master but you can move it to a branch to look at that version
+
+-- tells you what branches in the repo and what branch you are on
+git branch
+
+--create a new branch
+git checkout -b newbranch
+
+-- switch branch
+git checkout branch
+
+-- takes work on "branch" and merge changes into the current working branch
+git merge branch
+
+forking allows you to make a copy of the repository
+
+pull request is if after forking code you can ask the owners to pull your changes
+
+you can create a github site using github pages
+use this repository name when making a newone
+username.github.io
+then make a index.html page in it
+
+you can then visit username.github.io

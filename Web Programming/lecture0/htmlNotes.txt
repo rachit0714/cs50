@@ -1,0 +1,208 @@
+<!DOCTYPE html> -- declares that the file is a html file
+<html lang="en"> -- starts document, lang is an attribute
+    <head> -- head tag for what appears on the top of the web browser
+        <title>Hello!</title>
+    </head>
+    <body> -- body tag that is what appears in the actual webpage
+        <h1> Hello, world! </h1> -- heading tags that where 1 is largest font and 3 are smallest
+    </body>
+<html>
+
+List tags
+<ol>
+    <li> first item </li>
+    <li> second item </li>
+    <li> third item </li>
+</ol>
+
+<ul>
+    <li> one item </li>
+    <li> another item </li>
+</ul>
+
+image tags don't have a closing tag where src is the path to the image file and alt is text that appears over the image
+additional attribute can be width
+<img src="filename" alt="image_description" width="200">    
+
+a link tag, can be external link or internal
+<a href="link"> text </a>
+
+-- start a table
+<table>
+        <thead> -- header of each table row shows at the top
+            <th>Ocean</th>
+            <th>Average Depth</th>
+            <th>Maximum Depth</th>
+        </thead>
+        <tbody> -- body of table
+            <tr> - row of the table, add more tr tags to make more rows
+                <td>Pacific</td> -- each data entry to individual table cells
+                <td>4280 m</td>
+                <td>10911 m</td>
+            </tr>
+        </tbody>
+</table>
+
+-- tag that makes a section
+<div>
+    -- name is for programmer and names can repeat, type can be text, radio button(radio), password(password) etc and placeholder is default text
+    <input name="name" type="text" placeholder="Name"> 
+    -- value 
+    <input name="color" type="radio" value="blue"> Blue
+</div>
+
+-- to make a data list, list with a scrollbar and one of the options needs to be picked
+<input name="country" list="countries" placeholder="Country">
+    <datalist id="countries"> -- make sure id holds the same value as list
+        <option value="Afghan">
+        <option value="Canada">
+    </datalist>
+
+CSS (Cascading Style Sheets)
+
+You can move the style option up a level to apply it to the whole page
+<h1 style="color: blue; text-align: center;">A Colorful Heading!</h1>
+
+You can add a style tag in the head tag to make style changes there
+or even its own file as a css file and list link it
+-- have this is its own file
+  h1 {
+      color: blue;
+      text-align: center;
+  }
+
+-- add this to the html file you want to apply the style to
+<link rel="stylesheet" href="styles.css">
+
+some attributes you can add to headings are color,font-weight, font-size(terms of pixels), font-family(you can add secondary fonts incase some browsers don't support it), text-align
+some attribute you can add to tables are border, padding
+
+can also add padding to the background so that elements are closer to the center
+
+-- to style all of them you style h1
+-- to style just one you can give an id attribute, but all id have to be uniqule
+-- to have multiple tags have the same styling you can give a class attribute that does not have to be unique
+<h1> Heading 1 <\h1>
+<h1> Heading 2 <\h1>
+<h1> Heading 3 <\h1>
+
+Order of style changes: inline -> id -> class -> type
+
+To change the style of a sublist item avoiding the rest of the list have that you can do 'ul > li' or 'ul li'
+
+To style divs of with certain attributes div[attribute="specification"]
+
+selector.png has additional info on how you can manipulate what tags get what styles
+
+-- styles you can add to buttons
+button {
+    background-color: red;
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+}
+
+button:hover {
+    background-color: green;
+}
+
+viewport
+
+to adjust for screensize use:
+<meta name="viewport" content="width=device-width, intitial-scale=1.0">
+
+media queries
+
+flexbook.html shows how to adjust display depending on screen size
+
+Bootstrap is a css libary 
+
+to use bootstrap
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+scss is a SASS file where you can make variables allows us to change multiple elements at one time
+useful if you have one consistent attribute in different items but not all attributes are the same across
+$color = red; -- makes a variable called color
+
+ul {
+    font-size: 15px;
+    color: $color;
+}
+
+
+ol {
+    font-size: 20px;
+    color: $color;
+}
+
+-- in terminal you can convert the scss file to a css file
+sass variables.scss:variables.css
+-- you can also have terminal watch for changes and covert accordingly
+sass --watch variables.scss:variables.css
+
+-- SASS
+$color: red;
+
+ul {
+    font-size: 14px;
+    color: $color;
+}
+
+ol {
+    font-size: 18px;
+    color: $color;
+}
+
+-- CSS
+SASS allows us to nest css selectors
+div {
+    font-size: 18px;
+
+    p {
+        color: blue;
+    }
+
+    ul {
+        color: green;
+    }
+}
+
+css can allow you to nest this way
+div {
+    font-size: 18px; }
+
+    p {
+        color: blue;
+    }
+
+    ul {
+        color: green;
+    }
+
+
+-- bootstrap for messages
+-- % starts a class style and @extend %classname allows it to be used
+%message {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+
+.success {
+    @extend %message;
+    background-color: green;
+}
+
+.warning {
+    @extend %message;
+    background-color: orange;
+}
+
+.error {
+    @extend %message;
+    background-color: red;
+}

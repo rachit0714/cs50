@@ -1,0 +1,13 @@
+div {
+    text-align:right;
+}
+div > a {
+    size:10px;
+    padding:4px;
+}
+
+form {
+    padding-top: 20%;
+    text-align:center;
+    border-radius:10px;
+}
