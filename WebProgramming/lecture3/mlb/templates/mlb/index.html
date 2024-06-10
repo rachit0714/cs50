@@ -1,0 +1,29 @@
+{% extends "mlb/layout.html" %}
+
+{% block body %}
+        <h1> Teams </h1>
+        <h2> American League</h2>
+        
+        {% for division, teams in al_teams.items %}
+        <h3> {{ division }} Division</h3>
+            {% for team in teams %}
+            <ul>
+                <li> {{ team }} </li>
+            </ul>
+            {% endfor %}
+
+        {% endfor %}
+
+        <h2> National League</h2>
+        
+        {% for division, teams in nl_teams.items %}
+        <h3> {{ division }} Division</h3>
+            {% for team in teams %}
+            <ul>
+                <li> {{ team }} </li>
+            </ul>
+            {% endfor %}
+
+        {% endfor %}
+
+{% endblock %}
